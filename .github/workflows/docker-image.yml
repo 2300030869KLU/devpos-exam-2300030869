@@ -27,9 +27,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./springbootexamproject
-          file: ./springbootexamproject/ansible-labexam-backend.Dockerfile
+          file: ./springbootexamproject/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ansible-labexam-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
